@@ -1,0 +1,22 @@
+span.estilo1
+{
+	letter-spacing:5px;
+	word-spacing:5px;
+}
+
+span.estilo2
+{
+	letter-spacing:2px;
+	word-spacing:2px;
+}
+
+span.estilo3
+{
+	letter-spacing:-2px;
+	word-spacing:-2px;
+}
+
+body
+{
+	text-transform: uppercase;
+}

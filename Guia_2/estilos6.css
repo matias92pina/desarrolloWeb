@@ -1,0 +1,21 @@
+.subrayado
+{
+	text-decoration: underline;
+}
+
+.arg
+{
+	background-color: blue;
+	color: white;
+}
+
+body
+{
+	background-color: #DDFF33;
+}
+
+.titulo
+{
+	font-family: "monaco", monospace;
+	background-color: #FF9633;
+}
