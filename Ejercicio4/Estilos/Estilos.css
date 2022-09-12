@@ -1,0 +1,14 @@
+﻿body {
+    background-color: antiquewhite;
+}
+
+
+
+tbody {
+    background-color: #FF9933;
+    display: block;
+}
+
+.negrita {
+    font-weight: bold;
+}
