@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html onclick="amarillo()" onkeypress="azul()" onmousemove="volver()">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equi="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content "width=device-width, intial-scale=1.0">
+        <link rel="stylesheet" href='estiloTabla_cop3-1.css'>
+        <title>Ejercicio 9- Formulario</title>
+        <script>
+            function validar(){
+                var nombre = document.getElementById('idNombre').value;
+                var apellido = document.getElementById('idApellido').value;
+                var dni= document.getElementById('idDni').value; 
+                var genero= document.getElementById('idGenero').value;
+                genero= genero.toUpperCase();
+                if (nombre==""){
+                    document.getElementById('idNombre').style.backgroundColor='#ff0000';
+                    alert("Nombre está vacío");
+                }
+                else if (apellido==""){
+                    document.getElementById('idApellido').style.backgroundColor='#ff0000';
+                    alert("Apellido está vacío");
+                }
+                else if (dni==""){
+                    document.getElementById('idDni').style.backgroundColor='#ff0000';
+                    alert("Ingrese su DNI");
+                }
+                else if (isNaN(dni)){
+                    document.getElementById('idDni').style.backgroundColor='#ff0000';
+                    alert("Ingrese sólo números para el DNI");
+                }
+
+                else if (genero !="M" && genero !="F" && genero !="X"){
+                    document.getElementById('idGenero').style.backgroundColor='#ff0000';
+                    alert("Los valores posibles para el genero son: M, F, X");
+                }
+                else {
+                    alert("Confirmación exitosa");
+                    document.getElementById('idGenero').style.backgroundColor='#ffffff';
+                    document.getElementById('idDni').style.backgroundColor='#ffffff';
+                    document.getElementById('idNombre').style.backgroundColor='#ffffff';
+                    document.getElementById('idApellido').style.backgroundColor='#ffffff';
+                    document.getElementById('cuerpo').style.backgroundColor='rgb(145, 185, 223)';
+                }
+            }
+
+            function amarillo(){
+                document.getElementById('idGenero').style.backgroundColor='#FFFFCC';
+                document.getElementById('idDni').style.backgroundColor='#FFFFCC';
+                document.getElementById('idNombre').style.backgroundColor='#FFFFCC';
+                document.getElementById('idApellido').style.backgroundColor='#FFFFCC';
+            }
+
+            function azul(){
+                document.getElementById('idGenero').style.backgroundColor='#CCE6FF';
+                document.getElementById('idDni').style.backgroundColor='#CCE6FF';
+                document.getElementById('idNombre').style.backgroundColor='#CCE6FF';
+                document.getElementById('idApellido').style.backgroundColor='#CCE6FF';
+            }
+
+            function volver(){
+                document.getElementById('idGenero').style.backgroundColor='#ffffff';
+                document.getElementById('idDni').style.backgroundColor='#ffffff';
+                document.getElementById('idNombre').style.backgroundColor='#ffffff';
+                document.getElementById('idApellido').style.backgroundColor='#ffffff';
+                document.getElementById('cuerpo').style.backgroundColor='#ffffff';
+            }
+
+            function soloNumeros(evento){
+                var code= (evento.which) ? evento.which : evento.keyCode; //Es el código que usamos para poder borrar
+
+                //Contemplamos al 8 como este código para que el user pueda borrar
+                if (code==8){
+                    return true;
+                }
+                //En ASCII los números están entre 48 y 57 caracteres (# de caracteres)
+                else if (code>=48 && code<=57){
+                    return true;
+                }
+                //si no es 8 o no está entre 48 y 57, no es un número
+                else{
+                    return false;
+                }
+            }
+        </script>
+	</head>
+	<body id="cuerpo">
+        <h2 style="text-align:center">Formulario de datos personales</h2>
+		<table>
+			<tr>
+				<td>
+					<label for="txtNombre">Nombre:</label>
+				</td>
+				<td>
+					<input type="text" name="txtNombre" id="idNombre" placeholder="Ingrese su nombre">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="txtApellido">Apellido:</label>
+				</td>
+				<td>
+					<input type="text" name="txtApellido" id="idApellido" placeholder="Ingrese su apellido">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="dni">DNI:</label>
+				</td>
+				<td>
+					<input type="text" name="dni" id="idDni" placeholder="Ingrese su DNI" onkeypress="return soloNumeros(event)">
+				</td>
+			</tr>
+            <tr>
+				<td>
+					<label for="genero">Genero:</label>
+				</td>
+				<td>
+					<input type="text" name="genero" id="idGenero" placeholder="Ingrese genero">
+				</td>
+			</tr>
+            <td colspan="2">
+                <input type="button" value="Confirmar" onclick="validar()">
+            </td>
+		</table> 
+	</body>
+<html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equi="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content "width=device-width, intial-scale=1.0">
+        <script>
+            function cambiarColor(){
+                document.getElementById('cuadroTexto').style.backgroundColor='#ff00ff';
+            }
+
+            function volver(){
+                document.getElementById('cuadroTexto').style.backgroundColor='#ffffff';
+            }
+        </script>
+		<title>Ejercicio 7- Cambia color cuadro</title>
+	</head>
+	<body>
+        <h2>Cambiemos el color del cuadro de texto</h2>
+        
+        <textarea id="cuadroTexto" rows="6" placeholder="cambiemos el color"></textarea>
+    </br>
+        <input type="button" value="Cambiar color" onclick="cambiarColor()">
+        </br>
+        <input type="button" value="Cancelar cambio" onclick="volver()">
+	</body>
+<html>

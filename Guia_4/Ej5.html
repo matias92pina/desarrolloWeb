@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equi="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content "width=device-width, intial-scale=1.0"></head>
+		<title>Ejercicio 5</title>
+	</head>
+	<body>
+		<script javascript>
+			
+			function mostrarNombreApellido(x,y){				
+
+				var resultado= y.toUpperCase() + ", " + (x.charAt(0).toUpperCase()+x.slice(1));
+				
+				return resultado
+			}
+		
+			var nombre= window.prompt("Ingresa tu nombre");
+			
+			var apellido= window.prompt("Ingresa tu apellido");
+			
+			window.document.write(mostrarNombreApellido(nombre,apellido));
+			
+		</script>
+	
+	</body>
+<html>

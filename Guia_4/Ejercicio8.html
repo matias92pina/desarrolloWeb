@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equi="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content "width=device-width, intial-scale=1.0"></head>
+        <link rel="stylesheet" href="extension8.css">
+
+        <script>
+            function mostrarTexto(){
+                document.getElementById('p2').className='visible';
+                document.getElementById('p3').className='oculto';
+                document.getElementById('p4').className='visible';
+            }
+
+            function volver(){
+                document.getElementById('p2').className='oculto';
+                document.getElementById('p3').className='visible';
+                document.getElementById('p4').className='oculto';
+            }
+        </script>
+
+		<title>Ejercicio 8- Ocultar/Mostrar</title>
+	</head>
+	<body>
+        <h3>El Gobierno declaró ‘sitio sagrado mapuche’ al Volcán Lanín y el gobernador de Neuquén salió al cruce: “Es un acto ilegal”</h3>
+        <a style="font-size:small ;" href="https://www.infobae.com/politica/2022/08/04/el-gobierno-declaro-sitio-sagrado-mapuche-al-volcan-lanin-y-el-gobernador-de-neuquen-salio-al-cruce-es-un-acto-ilegal/">
+            Fuente
+        </a>
+
+        <p class="visible" id="p1">
+            Un nuevo foco de conflicto quedó abierto en las últimas horas entre la provincia de Neuquén y la 
+            Administración de Parques Nacionales (APN) luego de que se conociera que la entidad oficializó la 
+            designación del Volcán Lanín como un “sitio sagrado mapuche”. 
+            Ante este escenario, fue el propio mandatario local el que cuestionó la medida al señalar que es 
+            “un acto ilegal”, al mismo tiempo que adelantó una serie de acciones legales al respecto.  
+            Ocurrió que ayer la APN declaró “Sitio Natural Sagrado Mapuche al Volcán Lanín” —en 
+            la provincia de Neuquén—, mediante la resolución 484 del 3 de agosto de este año. 
+            Por medio del documento, a su vez, determinó que debe crearse un mecanismo de trabajo 
+            conjunto con el pueblo Mapuche para la elaboración de un plan de manejo del lugar.
+        </p>
+
+        <a class="visible" id="p3" onclick="mostrarTexto()">Seguir leyendo</a>
+
+        <p class="oculto" id="p2">
+            “Desde Parques Nacionales se decidió declarar ‘sitio sagrado’ al volcán Lanín, de manera unilateral e 
+            inconsulta, desconociendo que el dominio de los recursos es provincial”, señaló ante este escenario el 
+            propio mandatario local en el inicio de un breve hilo de Twitter. “Es un atropello a las autonomías, 
+            un acto de centralismo y una intromisión”, continuó Omar Gutiérrez por medio del duro cuestionamiento 
+            que publicó este jueves.
+
+            La resolución, votada por el directorio del organismo nacional, expresa que “el Plan de Gestión del Parque Nacional Lanín 
+            presenta una valoración, caracterización y tratamiento integrales del Volcán Lanín, en función de una diversidad de conocimientos,
+            significaciones espirituales, culturales, estéticas, históricas, sociales -entre otras- que el mismo inspira”, tal como precisa
+            la agencia Télam.
+        </p>
+
+        <a class="oculto" id="p4" onclick="volver()">Leer menos</a>
+
+	</body>
+<html>
